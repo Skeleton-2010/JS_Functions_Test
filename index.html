@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("<---1--->");
+      let triArray = [1, 2, 3];
+      triArray[2] = 10;
+      console.log(triArray);
+
+      console.log("<---2--->");
+      let layers = [
+        [1, 1, 1],
+        [2, 2, 2],
+        [3, 3, 3],
+      ];
+      console.log(layers);
+      layers.push([4, 4, 4]);
+      console.log(layers);
+
+      console.log("<---4--->");
+      let inpVals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      function summarize(nums) {
+        outVal = 0;
+        for (let i of nums) {
+          outVal += i;
+        }
+        return outVal;
+      }
+      console.log(summarize(inpVals));
+
+      console.log("<---5--->");
+      let wordList = ["key", "door", "uncle", "car", "orange", "telephone"];
+      function searchLength(words, minLength) {
+        for (let i of words) {
+          if (i.length > minLength) {
+            console.log(i);
+          }
+        }
+      }
+      searchLength(wordList, 5);
+
+      console.log("<---6--->");
+      let numbers = [
+        1, 6, 32, 658, 324, 890, 213, 56, 3, 4, 421, 34, 8, 90, 879, 42, 67,
+      ];
+
+      function searchBiggest(nums) {
+        biggest = -99999;
+        for (let i of nums) {
+          if (i > biggest) {
+            biggest = i;
+          }
+        }
+        return biggest;
+      }
+      console.log(searchBiggest(numbers));
+
+      console.log("<---7--->");
+      numbers = [
+        1, 6, 32, 658, 324, 890, 213, 56, 3, 4, 421, 34, 8, 90, 879, 42, 67,
+      ];
+      function searchEvens(nums) {
+        for (let i of nums) {
+          if (i % 2 == 0) {
+            console.log(i);
+          }
+        }
+      }
+      searchEvens(numbers);
+    </script>
+  </body>
+</html>
